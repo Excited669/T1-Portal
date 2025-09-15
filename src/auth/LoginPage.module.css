@@ -1,0 +1,269 @@
+.loginContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.loginCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loginLeft {
+  flex: 1;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 50%, #D9D9D9 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.loginHeadline {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.loginDescription {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.loginRight {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginForm {
+  max-width: 400px;
+  width: 100%;
+}
+
+.loginForm h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.loginSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #00AAE6;
+  box-shadow: 0 0 0 3px rgba(0, 170, 230, 0.1);
+}
+
+.formInput.error {
+  border-color: #dc3545;
+}
+
+.formInput:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.passwordInputContainer {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwordToggle:hover {
+  color: #333;
+}
+
+.passwordToggle:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 32px;
+}
+
+.forgotPassword a {
+  color: #00AAE6;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loginButton:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 170, 230, 0.3);
+}
+
+.loginButton:disabled,
+.loginButton.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.registerLink {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.registerLink a {
+  color: #00AAE6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.registerLink a:hover {
+  text-decoration: underline;
+}
+
+.blockedMessage {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .loginCard {
+    flex-direction: column;
+  }
+  
+  .loginLeft {
+    padding: 40px 24px;
+  }
+  
+  .loginRight {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginContainer {
+    padding: 16px;
+  }
+  
+  .loginCard {
+    border-radius: 16px;
+  }
+  
+  .loginLeft {
+    padding: 32px 20px;
+  }
+  
+  .loginRight {
+    padding: 32px 20px;
+  }
+  
+  .loginForm h2 {
+    font-size: 28px;
+  }
+}

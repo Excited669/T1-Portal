@@ -1,0 +1,45 @@
+.feedbackButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedbackButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.feedbackButton:hover::before {
+  left: 100%;
+}
+
+.feedbackButton:hover {
+  background-color: #00AAE6 !important;
+  color: white !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 170, 230, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .feedbackButton {
+    width: 36px;
+    height: 36px;
+  }
+}

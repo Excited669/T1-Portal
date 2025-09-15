@@ -1,0 +1,159 @@
+.sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e1e5e9;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebarLogo {
+  padding: 24px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.searchContainer {
+  position: relative;
+  padding: 16px;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #e1e5e9;
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: #00AAE6;
+  background-color: white;
+}
+
+.navMenu {
+  list-style: none;
+  padding: 16px 0;
+  flex: 1;
+}
+
+
+
+.navItem {
+  cursor: not-allowed;
+  margin-bottom: 4px;
+}
+
+.navItem:first-child {
+  cursor: pointer;
+}
+
+.navLink {
+  display: block;
+  padding: 12px 24px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+ 
+}
+
+
+
+.navLink:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.navLink.active {
+  background-color: #e3f2fd;
+  color: #00AAE6;
+  border-left-color: #00AAE6;
+  font-weight: 500;
+}
+
+.mobileMenuButton {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenuOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobileOpen {
+  transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .mobileMenuButton {
+    display: block;
+  }
+  
+  .mobileMenuOverlay {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobileMenuButton {
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    max-width: 280px;
+  }
+  .mobileMenuButton {
+    top: 4px;
+    left: 8px;
+    padding: 4px;
+  }
+}
+
+/* Дополнительные медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  /* .mobileMenuButton {
+    top: 8px;
+    left: 8px;
+    padding: 4px;
+  } */
+}

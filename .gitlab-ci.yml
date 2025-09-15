@@ -1,0 +1,27 @@
+stages:
+  - build
+  - trigger
+
+variables:
+  VITE_API_BASE_URL: "http://10.10.146.200:8888"
+
+build-job:
+  stage: build
+  image: node:20
+  tags:
+    - docker
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+trigger-deploy:
+  stage: trigger
+  image: curlimages/curl:latest
+  script:
+    - curl -X POST -F token=glptt-8e1f3046d2f20eff6b948b2bfc510b73368d1efa -F ref=main -k "https://it-camp.innoca.local/api/v4/projects/260/trigger/pipeline"
+  only:
+    - main
+  when: on_success

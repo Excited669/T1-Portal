@@ -1,0 +1,344 @@
+.educationContainer {
+  padding: 24px;
+}
+
+.courseSection {
+  margin-bottom: 32px;
+}
+
+.courseTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 24px;
+}
+
+.courseContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.courseCard {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courseCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.courseIcon {
+  color: #00AAE6;
+  margin-bottom: 20px;
+}
+
+.courseCard h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 16px;
+}
+
+.courseCard p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.startTestButton {
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.startTestButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 170, 230, 0.3);
+}
+
+/* Тест */
+.testContainer {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testProgress {
+  margin-bottom: 32px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #e1e5e9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.questionCard {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.questionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.optionItem:hover {
+  border-color: #00AAE6;
+  background-color: #f8f9fa;
+}
+
+.optionItem.selected {
+  border-color: #00AAE6;
+  background-color: #e3f2fd;
+}
+
+.optionInput {
+  margin-right: 16px;
+  transform: scale(1.2);
+  accent-color: #00AAE6;
+}
+
+.optionText {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.testNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navButton {
+  padding: 12px 24px;
+  border: 2px solid #e1e5e9;
+  background: white;
+  color: #666;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  border-color: #00AAE6;
+  color: #00AAE6;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nextButton {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nextButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 170, 230, 0.3);
+}
+
+.nextButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Результаты теста */
+.testResults {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.resultsCard {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.resultsIcon {
+  color: #00AAE6;
+  margin-bottom: 24px;
+}
+
+.resultsCard h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 24px;
+}
+
+.scoreDisplay {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.scoreNumber {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00AAE6;
+}
+
+.scoreTotal {
+  font-size: 24px;
+  color: #666;
+  font-weight: 500;
+}
+
+.scoreText {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.resultsActions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.restartButton {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restartButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 170, 230, 0.3);
+}
+
+.backButton {
+  padding: 14px 28px;
+  border: 2px solid #e1e5e9;
+  background: white;
+  color: #666;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  border-color: #00AAE6;
+  color: #00AAE6;
+}
+
+/* Стили для кнопки выхода */
+.logout-button {
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  color: #dc3545 !important;
+  background-color: #fff5f5 !important;
+  transform: scale(1.1);
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .educationContainer,
+  .testContainer {
+    padding: 16px;
+  }
+  
+  .courseCard,
+  .questionCard,
+  .resultsCard {
+    padding: 24px;
+  }
+  
+  .testNavigation {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .navButton,
+  .nextButton {
+    width: 100%;
+  }
+}

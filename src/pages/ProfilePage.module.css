@@ -1,0 +1,565 @@
+.profileLayout {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+}
+
+.leftSidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.profileContent {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* User Info Card */
+.userInfoCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.userPhoto {
+  margin-bottom: 16px;
+}
+
+.avatarCircle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 auto;
+  border: 1px solid #a3a5a7;
+}
+
+.userNameLarge {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.userPosition {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.userDepartment {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.writeMeButton {
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.writeMeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 170, 230, 0.3);
+}
+
+/* Static Cards */
+.staticCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.staticCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Кнопка "Карта достижений" */
+.achievementsMapButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievementsMapButton:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+.achievementsMapButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.achievementsMapButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.achievementsMapButton:hover::before {
+  left: 100%;
+}
+
+.achievementsMapButtonText {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+.achievementsGridSmall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.viewAllLink,
+.viewAllLinkButton {
+  color: #00AAE6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.viewAllLink:hover,
+.viewAllLinkButton:hover {
+  text-decoration: underline;
+}
+
+.certificatesPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.colleaguesAvatars {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.colleagueAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.colleagueAvatarTeal {
+  background-color: #20c997;
+}
+
+.colleagueAvatarRed {
+  background-color: #dc3545;
+}
+
+.colleagueAvatarBlack {
+  background-color: #343a40;
+}
+
+/* Profile Tabs */
+.profileTabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.profileTab {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.profileTab:hover {
+  background: #00AAE6;
+  color: white;
+  border-color: #00AAE6;
+}
+
+.profileTab.active {
+  background: #00AAE6;
+  color: white;
+  border-color: #00AAE6;
+}
+
+.profileContentArea {
+  padding: 24px;
+}
+
+/* Profile Info */
+.profileInfoContent {
+  max-width: 800px;
+}
+
+.profileInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.infoSection h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.infoValue {
+  font-size: 14px;
+  color: #333;
+  text-align: right;
+}
+
+/* Activity */
+.activityContent {
+  max-width: 800px;
+}
+
+.activityContent h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.activityContent p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profileLayout {
+    flex-direction: column;
+  }
+  
+  .leftSidebar {
+    width: 100%;
+  }
+  
+  .profileInfoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .profileLayout {
+    padding: 16px;
+  }
+  
+  .achievementsGridSmall {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profileTabs {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .achievementsGridSmall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Activity Styles */
+.activityTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #00AAE6;
+}
+
+.activityIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.activityIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityMessage {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.activityDate {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Colleagues Styles */
+.colleaguesContent {
+  max-width: 1000px;
+}
+
+.colleaguesTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.colleaguesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.colleagueCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.colleagueCard:hover {
+  background: #e9ecef;
+  border-color: #00AAE6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 170, 230, 0.1);
+}
+
+.colleagueAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.colleagueAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.colleagueInitials {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00AAE6 0%, #82D5FF 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.colleagueInfo {
+  flex: 1;
+}
+
+.colleagueName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.colleagueRole {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.colleagueEmail {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.paginationButton:hover:not(:disabled) {
+  border-color: #00AAE6;
+  color: #00AAE6;
+}
+
+.paginationButton.active {
+  background: #00AAE6;
+  border-color: #00AAE6;
+  color: white;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading and Error States */
+.loadingState,
+.errorState,
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 16px;
+  color: #666;
+}
+
+.errorState {
+  color: #dc3545;
+}
+
+.emptyState {
+  color: #999;
+}
+
+/* Colleagues Button */
+.colleaguesButton {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.colleaguesButton:hover {
+  background: none;
+}

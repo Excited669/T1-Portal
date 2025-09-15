@@ -1,0 +1,165 @@
+.achievementsMapButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievementsMapButton:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #dee2e6;
+}
+
+.achievementsMapButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.achievementsMapButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.achievementsMapButton:hover::before {
+  left: 100%;
+}
+
+.achievementsMapButtonText {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profileLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contentPadding {
+  padding: 24px;
+  text-align: center;
+}
+
+.mainContentPadding {
+  padding: 32px;
+}
+
+.noAchievementsContainer {
+  text-align: center;
+  padding: 40px;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutButton:hover {
+  background-color: #f8f9fa;
+  color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logoutButton:active {
+  transform: translateY(0);
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.userAvatar:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.userName {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mainContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  /* overflow: hidden; */
+}
+
+.loadingText {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 16px;
+  margin: 0;
+}
+
+.noAchievementsText {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}

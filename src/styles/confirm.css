@@ -1,0 +1,32 @@
+.confirm-backdrop {
+  position: fixed; 
+  inset: 0; 
+  background: rgba(0,0,0,.4);
+  display: grid; 
+  place-items: center; 
+  z-index: 2147483646;
+}
+.confirm-modal {
+  width: min(520px, 92vw); 
+  background: #fff; 
+  color: #0b1215; 
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25); 
+  padding: 20px;
+}
+.confirm-modal h2 { margin: 0 0 12px; font-size: 18px; }
+.confirm-modal p { margin: 0 0 16px; line-height: 1.45; }
+.confirm-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.confirm-actions button { 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  border: 1px solid #d1d5db; 
+  background: #f9fafb; 
+  cursor: pointer; 
+}
+.confirm-actions button.danger { 
+  background: #dc2626; 
+  color: #fff; 
+  border-color: transparent; 
+}
+.confirm-actions button:hover { filter: brightness(.97); }

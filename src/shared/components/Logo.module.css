@@ -1,0 +1,38 @@
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1976d2;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+.logoImgSmall {
+  width: 60px;
+  height: auto;
+}
+
+.logoImgMedium {
+  width: 120px;
+  height: auto;
+}
+
+.logoImgLarge {
+  width: 180px;
+  height: auto;
+}
+
+.loginLeftLogo {
+  color: white;
+  font-size: 36px;
+}
